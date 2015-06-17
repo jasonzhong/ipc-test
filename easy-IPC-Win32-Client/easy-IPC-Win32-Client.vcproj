@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="easy-IPC"
-	ProjectGUID="{D268D471-B571-4EE8-8257-9D92189F75BF}"
-	RootNamespace="easyIPC"
+	Name="easy-IPC-Win32-Client"
+	ProjectGUID="{F8BDEB68-115F-4952-BCEC-79BB9D689EE2}"
+	RootNamespace="easyIPCWin32Client"
 	Keyword="Win32Proj"
 	>
 	<Platforms>
@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -62,7 +62,7 @@
 				Name="VCLinkerTool"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
-				SubSystem="1"
+				SubSystem="2"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -115,7 +115,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="2"
 				WarningLevel="3"
@@ -135,7 +135,7 @@
 				Name="VCLinkerTool"
 				LinkIncremental="1"
 				GenerateDebugInformation="true"
-				SubSystem="1"
+				SubSystem="2"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
 				TargetMachine="1"
@@ -175,7 +175,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\easy-IPC.cpp"
+				RelativePath=".\easy-IPC-Win32-Client.cpp"
 				>
 			</File>
 			<File
@@ -205,19 +205,11 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\Clipboard.hpp"
+				RelativePath=".\easy-IPC-Win32-Client.h"
 				>
 			</File>
 			<File
-				RelativePath=".\MapFile.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\MessageIpc.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\NamedPipes.hpp"
+				RelativePath=".\Resource.h"
 				>
 			</File>
 			<File
@@ -230,6 +222,18 @@
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
+			<File
+				RelativePath=".\easy-IPC-Win32-Client.ico"
+				>
+			</File>
+			<File
+				RelativePath=".\easy-IPC-Win32-Client.rc"
+				>
+			</File>
+			<File
+				RelativePath=".\small.ico"
+				>
+			</File>
 		</Filter>
 		<File
 			RelativePath=".\ReadMe.txt"

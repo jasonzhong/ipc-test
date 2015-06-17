@@ -5,6 +5,7 @@
 #include "NamedPipes.hpp"
 #include "MapFile.hpp"
 #include "Clipboard.hpp"
+#include "MessageIpc.hpp"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -16,8 +17,11 @@ int _tmain(int argc, _TCHAR* argv[])
 //     EasyIPCMapFileService easyIpc;
 //     easyIpc.EasyMapFilesStart();
 
-    EasyIPCClipboardService easyIpc;
-    easyIpc.EasyClipboardStart();
+//     EasyIPCClipboardService easyIpc;
+//     easyIpc.EasyClipboardStart();
+
+    EasyIPCMessageService easyIpc;
+    easyIpc.EasyMessageStart();
 
 	return 0;
 }
