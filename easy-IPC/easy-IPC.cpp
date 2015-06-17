@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "NamedPipes.hpp"
 #include "MapFile.hpp"
+#include "Clipboard.hpp"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -12,8 +13,11 @@ int _tmain(int argc, _TCHAR* argv[])
 //     EasyIPCNamePipesService easyIpc;
 //     easyIpc.EasyPipeStart();
 
-    EasyIPCMapFileService easyIpc;
-    easyIpc.EasyMapFilesStart();
+//     EasyIPCMapFileService easyIpc;
+//     easyIpc.EasyMapFilesStart();
+
+    EasyIPCClipboardService easyIpc;
+    easyIpc.EasyClipboardStart();
 
 	return 0;
 }
