@@ -6,6 +6,7 @@
 #include "MapFile.hpp"
 #include "Clipboard.hpp"
 #include "MessageIpc.hpp"
+#include "MailSlot.hpp"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -20,9 +21,12 @@ int _tmain(int argc, _TCHAR* argv[])
 //     EasyIPCClipboardService easyIpc;
 //     easyIpc.EasyClipboardStart();
 
-    EasyIPCMessageService easyIpc;
-    easyIpc.EasyMessageStart();
+//     EasyIPCMessageService easyIpc;
+//     easyIpc.EasyMessageStart();
 
-	return 0;
+    EasyIPCMailslotService easyIpc;
+    easyIpc.EasyMailslotStart();
+	
+    return 0;
 }
 

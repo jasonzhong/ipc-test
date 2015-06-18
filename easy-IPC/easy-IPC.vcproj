@@ -209,6 +209,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\MailSlot.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\MapFile.hpp"
 				>
 			</File>

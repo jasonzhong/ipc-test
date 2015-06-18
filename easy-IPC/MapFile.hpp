@@ -35,6 +35,8 @@ BOOL EasyIPCMapFileService::EasyMapFilesStart()
 
     _MapFileSend( m_hShareMemory, lpBuffer );
     Sleep( 10 * 1000 * 1000 * 60 );
+
+    return TRUE;
 }
 
 BOOL EasyIPCMapFileService::_MapFileSend( HANDLE& m_hShareMemory, CHAR* lpBuffer )

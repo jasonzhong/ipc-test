@@ -6,6 +6,7 @@
 #include "MapFile.hpp"
 #include "Clipboard.hpp"
 #include <wtypes.h>
+#include "MailSlot.hpp"
 
 DWORD g_dwMainThreadId;
 
@@ -32,19 +33,23 @@ int _tmain(int argc, _TCHAR* argv[])
 //     EasyIPCClipboardClient easyIpc;
 //     easyIpc.EasyClipboardStart();
 
-    HWND hWnd = GetConsoleWindow();
+    EasyIPCMailslotClient easyIpc;
+    easyIpc.EasyMailslotStart();
 
-    g_dwMainThreadId = GetCurrentThreadId();
-    SetConsoleCtrlHandler( ConsoleCtrlhandler, TRUE );
 
-    MSG msg;
-    while ( GetMessage( &msg, NULL, 0, 0 ) )
-    {
-        TranslateMessage( &msg );
-        DispatchMessage( &msg );
-    }
-
-    SetConsoleCtrlHandler( ConsoleCtrlhandler, FALSE );
+//     HWND hWnd = GetConsoleWindow();
+// 
+//     g_dwMainThreadId = GetCurrentThreadId();
+//     SetConsoleCtrlHandler( ConsoleCtrlhandler, TRUE );
+// 
+//     MSG msg;
+//     while ( GetMessage( &msg, NULL, 0, 0 ) )
+//     {
+//         TranslateMessage( &msg );
+//         DispatchMessage( &msg );
+//     }
+// 
+//     SetConsoleCtrlHandler( ConsoleCtrlhandler, FALSE );
 
 	return 0;
 }
